@@ -3,13 +3,13 @@ import css from './Pagination.module.css';
 
 interface PaginationProps {
   totalPages: number;
-  page: number;
+  currentPage: number;
   onPageChange: (page: number) => void;
 }
 
 export default function Pagination({
   totalPages,
-  page,
+  currentPage,
   onPageChange,
 }: PaginationProps) {
   return (
@@ -20,7 +20,7 @@ export default function Pagination({
         nextLabel="->"
         onPageChange={({ selected }) => onPageChange(selected + 1)}
         previousLabel="<-"
-        forcePage={page - 1}
+        forcePage={currentPage - 1}
         containerClassName={css.pagination}
         activeClassName={css.active}
       />

@@ -9,8 +9,8 @@ export interface Note {
   tag: NoteTag;
 }
 
-export interface NoteCreatePayload {
-  title: string;
-  content: string;
-  tag: NoteTag;
-}
+// export interface NoteCreatePayload {
+//   title: string;
+//   content: string;
+//   tag: NoteTag;
+// }
