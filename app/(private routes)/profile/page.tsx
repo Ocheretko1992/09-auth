@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import css from './ProfilePage.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getMe } from '@/lib/api/clientApi';
-
+import { getMe } from '@/lib/api/serverApi';
 
 export const metadata: Metadata = {
   title: 'Profile',
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Profile',
     description: 'User profile page',
-    url: 'https://09-auth-kohl-six.vercel.app//profile',
+    url: 'http://localhost:3000/profile',
   },
 };
 

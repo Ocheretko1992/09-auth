@@ -30,6 +30,11 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.listItem:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
 }
 
 .title {

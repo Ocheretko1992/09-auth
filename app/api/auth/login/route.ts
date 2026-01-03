@@ -58,12 +58,10 @@ export async function POST(req: NextRequest) {
     if (setCookie) {
       const cookieArray = Array.isArray(setCookie) ? setCookie : [setCookie];
 
-      // створюємо відповідь
       const response = NextResponse.json(apiRes.data, {
         status: apiRes.status,
       });
 
-      // додаємо всі cookie у заголовки відповіді
       cookieArray.forEach(cookieStr => {
         response.headers.append('Set-Cookie', cookieStr);
       });
