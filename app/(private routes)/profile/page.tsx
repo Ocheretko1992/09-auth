@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Profile',
     description: 'User profile page',
-    url: 'http://localhost:3000/profile',
+    url: 'https://09-auth-lovat-tau.vercel.app/profile',
   },
 };
 
