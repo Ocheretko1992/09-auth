@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { checkServerSession } from './lib/api/serverApi';
+
 const privateRoutes = ['/profile', '/notes'];
 const publicRoutes = ['/sign-in', '/sign-up'];
 
@@ -44,11 +45,15 @@ export async function proxy(request: NextRequest) {
 
       if (isPrivateRoute) {
         return NextResponse.redirect(new URL('/sign-in', request.url));
-      } else {
-        return NextResponse.next();
       }
+      return NextResponse.next();
     }
   }
+
+  if (isPrivateRoute) {
+    return NextResponse.redirect(new URL('/sign-in', request.url));
+  }
+  return NextResponse.next();
 }
 
 export const config = {
