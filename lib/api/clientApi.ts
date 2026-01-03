@@ -55,7 +55,6 @@ export async function fetchNotes(
 
   const response = await api.get<FetchNotesResponse>('/notes', { params });
 
-  // Нормалізація: гарантуємо, що notes завжди масив, а totalPages число
   const safeData = response.data ?? { notes: [], totalPages: 0 };
 
   return {
