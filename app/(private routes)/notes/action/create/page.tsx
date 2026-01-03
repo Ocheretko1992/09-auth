@@ -25,7 +25,6 @@ const CreateNote = () => {
   return (
     <main className={css.main}>
       <div className={css.container}>
-        <h1 className={css.title}>Create notes</h1>
         <NoteForm/>
       </div>
     </main>

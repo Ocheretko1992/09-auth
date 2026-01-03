@@ -46,6 +46,7 @@ const NoteForm = () => {
 
   return (
     <form className={css.form} action={handleSubmit}>
+      <h1 className={css.title}>Create notes</h1>
       <div className={css.formGroup}>
         <label htmlFor="title">Title</label>
         <input
