@@ -63,7 +63,7 @@ const AuthNavigation = () => {
           </li>
 
           <li className={css.navigationItem}>
-            <p className={css.userEmail}>{user?.email}</p>
+            <Link href="/profile/edit" className={css.userEmail}>{user?.email}</Link>
             <button
               type="button"
               className={css.logoutButton}

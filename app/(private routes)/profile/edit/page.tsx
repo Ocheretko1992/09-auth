@@ -54,6 +54,7 @@ export default function EditProfile() {
           <div className={css.usernameWrapper}>
             <label htmlFor="username">Username:</label>
             <input
+              className={css.userEmailInput}
               type="text"
               name="username"
               value={userName}
